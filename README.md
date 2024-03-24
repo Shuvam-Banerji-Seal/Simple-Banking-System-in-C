@@ -1,16 +1,16 @@
 
-**Simple Banking System**
+#**Simple Banking System**
 
 This C++ program implements a simple banking system that allows users to create an account, deposit and withdraw funds, and check their current balance. Account information is stored in a text file named "account.txt" for persistence.
 
-**Code Structure**
+##**Code Structure**
 
 The code is organized into two main parts:
 
 - **`Account` Class:** This class represents a bank account with attributes like first name, last name, account number, and balance. It provides methods for setting and retrieving account details, as well as depositing and withdrawing funds.
 - **`main` Function:** This function drives the user interaction with the banking system. It allows users to create an account, perform transactions (deposit or withdrawal), and check their balance.
 
-**Class Documentation**
+##**Class Documentation**
 
 **`Account` Class**
 
@@ -52,14 +52,14 @@ private:
 };
 ```
 
-**Member Variable Descriptions:**
+##**Member Variable Descriptions:**
 
 - `firstName`: Stores the account holder's first name.
 - `lastName`: Stores the account holder's last name.
 - `accountNumber`: Uniquely identifies the account.
 - `balance`: Represents the current balance of the account.
 
-**Method Descriptions:**
+##**Method Descriptions:**
 
 - **Constructors:**
     - `Account()`: Default constructor, initializes all attributes to empty strings and 0.
@@ -140,7 +140,7 @@ int main() {
 }
 ```
 
-**Explanation of `main` Function:**
+##**Explanation of `main` Function:**
 
 1. **Opening Account File:**
    - `fstream fi("account.txt", ios::in | ios::out | ios::trunc);`: This line opens the file "account.txt" in read-write mode with truncation. The `trunc` flag ensures that any existing data in the file is cleared before starting.
@@ -169,12 +169,12 @@ int main() {
 6. **Returning 0:**
    - `return 0;`: Indicates successful program execution.
 
-**Error Handling**
+##**Error Handling**
 
 - The `setBalance` method throws an exception (`throw 100`) if the initial balance is less than the minimum balance defined by `MIN_BALANCE`.
 - The `getWithdrawal` method throws an exception (`throw 101`) if the withdrawal amount would result in insufficient funds. The exception handler displays an error message to the user.
 
-**Assumptions**
+##**Assumptions**
 
 - The code assumes that the "account.txt" file exists or can be created in the current directory.
 - User input is validated for basic data types (string and integer).
